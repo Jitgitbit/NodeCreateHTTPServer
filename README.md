@@ -42,6 +42,17 @@ Our requestListener expects to take in request and response objects (req and res
 
 When you feel like you have a sense for the code base, move on to the next step!
 
+2.
+It’s time to make the web server! In app.js, create a variable server and assign to it the value of invoking the http.createServer(). Remember, you’ll need to pass a callback function in as the argument to http.createServer(). We’ve already required in the function requestListener from the callbackFile.js file.
+
+3.
+Awesome! Now that we have the server we need it to start listening for incoming requests! We supplied a PORT variable at the top of app.js. Invoke the server.listen() method passing in PORT as the argument.
+
+4.
+Let’s get this server up and running! Type node app.js in the terminal and press enter. If everything worked, you should be able to navigate to http://localhost:4001 in the browser and see the rendered HTML.
+
+Feel free to make changes and experiment. You can stop the server by typing controlc, make whatever changes you’d like, and then start the server by typing node app.js in the terminal again and pressing enter.
+
 Awesome work! You’ve learned a lot about Node.js including:
 
 Node.js is a JavaScript runtime, an environment that allows us to execute our JavaScript code by converting it into something a computer can understand.
@@ -61,14 +72,3 @@ The Node http core module allows for easy creation of web servers, computer proc
 Woah, that was a lot… And there’s even more to Node that we didn’t cover in this lesson, but don’t panic! Learning Node isn’t about memorizing every aspect of the environment. The best way to get comfortable with Node is just to practice making things in it. Your imagination is the limit! If you haven’t already, download Node on your local machine. You can start by recreating some of the programs you built in this lesson— put your own spin on a guessing game, for example. If you’re eager to build web application back-ends, we recommend you start learning the awesome Express.js web framework.
 
 Great work! We’re excited to see what you build!
-
-2.
-It’s time to make the web server! In app.js, create a variable server and assign to it the value of invoking the http.createServer(). Remember, you’ll need to pass a callback function in as the argument to http.createServer(). We’ve already required in the function requestListener from the callbackFile.js file.
-
-3.
-Awesome! Now that we have the server we need it to start listening for incoming requests! We supplied a PORT variable at the top of app.js. Invoke the server.listen() method passing in PORT as the argument.
-
-4.
-Let’s get this server up and running! Type node app.js in the terminal and press enter. If everything worked, you should be able to navigate to http://localhost:4001 in the browser and see the rendered HTML.
-
-Feel free to make changes and experiment. You can stop the server by typing controlc, make whatever changes you’d like, and then start the server by typing node app.js in the terminal again and pressing enter.
