@@ -1,12 +1,7 @@
-const readline = require('readline');
-const fs = require('fs');
+const http = require('http');
+let {requestListener} = require('./callbackFile.js');
+const PORT = process.env.PORT || 4001;
 
-const myInterface = readline.createInterface({
-  input: fs.createReadStream('shoppingList.txt')
-}); 
+const server = http.createServer(requestListener);
 
-const printData = (data) => {
-  console.log(`Item: ${data}`);
-};
-
-myInterface.on('line', printData);
+server.listen(PORT);
